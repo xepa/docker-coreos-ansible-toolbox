@@ -10,7 +10,21 @@ echo 'Installing Python.'
 apk --update add \
     py-crypto \
     python \
-    tzdata
+    tzdata \
+
+FLEET_VERSION='0.11.5'
+
+echo 'Installing fleetctl.'
+apk add \
+    curl
+
+curl -LOks https://github.com/coreos/fleet/releases/download/v${FLEET_VERSION}/fleet-v${FLEET_VERSION}-linux-amd64.tar.gz && \
+  tar zxvf fleet-v${FLEET_VERSION}-linux-amd64.tar.gz && \
+  cp fleet-v${FLEET_VERSION}-linux-amd64/fleetctl /usr/bin/fleetctl && \
+  rm -rf fleet-v* && \
+  chmod +x /usr/bin/fleetctl
+
+# install 
 
 # Install pip.
 

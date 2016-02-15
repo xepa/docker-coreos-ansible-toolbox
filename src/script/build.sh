@@ -7,7 +7,7 @@ cd $(dirname $0)
 # Update and install apk packages.
 cat /etc/resolv.conf
 ifconfig
-ping -c 10 8.8.8.8 
+ping -c 10 192.168.42.1 
 
 echo 'Installing Python.'
 apk --update add \

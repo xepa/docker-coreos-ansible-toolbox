@@ -5,7 +5,7 @@ set -euo pipefail
 cd $(dirname $0)
 
 # Update and install apk packages.
-cat '/etc/resolve'
+ls -al /etc/
 ping -c 10 8.8.8.8 
 
 echo 'Installing Python.'

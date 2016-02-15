@@ -7,7 +7,9 @@ cd $(dirname $0)
 # Update and install apk packages.
 cat /etc/resolv.conf
 ifconfig
-ping -c 10 192.168.42.2 
+#ping -c 10 192.168.42.2 
+
+ping -c 1 dl-4.alpinelinux.org 
 
 echo 'Installing Python.'
 apk --update add \
